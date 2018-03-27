@@ -18,3 +18,5 @@ var EMoveStatus = {
 	POSSIBLE : 1,	
 	POSSIBLE_DESC : 2
 };
+
+var CLIENT_VERSION = "0.0.0";

@@ -5,6 +5,7 @@ window.onload = function() {
 var game;
 
 function startGame() {
+	console.log("client version : " + CLIENT_VERSION);
 	game = new Phaser.Game(800, 600, Phaser.AUTO, 'test', {preload : preload, create : create});
 }
 
