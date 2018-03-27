@@ -124,7 +124,7 @@ function allocate() {
 	
 	swap(getBlockByNum(1), getBlockByIndex(12));
 	
-	console.log(blockList);
+//	console.log(blockList);
 }
 
 function setCurrent(inBlock) {
@@ -142,7 +142,7 @@ function setCurrent(inBlock) {
 	
 	currentIndex = inBlock.index;
 	
-	console.log("currentIndex : " + currentIndex + " ,currentNum : " + inBlock.num);
+//	console.log("currentIndex : " + currentIndex + " ,currentNum : " + inBlock.num);
 }
 
 function getBlockByIndex(inIndex) {
@@ -301,6 +301,8 @@ function oneCycleComplete(inPoint) {
 	
 	//블록 생성	
 	var maxNum = getMaxNum();
+	console.log("블록 생성 : index : " + oppositeIndices[oppositeIndices.length - 1] + " num : " + maxNum + 1);
+	
 	var newBlock = createBlock(oppositeIndices[oppositeIndices.length - 1], maxNum + 1);
 	bg.addChild(newBlock);
 	blockList[newBlock.index] = newBlock;
@@ -308,11 +310,12 @@ function oneCycleComplete(inPoint) {
 	//획득 포인트만큼 반복하면서 가장 낮은수를 가장 높은수로 변경
 	for(var i = 0; i < inPoint; ++i) {
 		var block = getMinNumBlock();
+		console.log(block.index + " 블록 숫자 변경 : " + block.num + " 에서 " + (maxNum + 2 + i) + " 로");
 		block.num = maxNum + 2 + i;
 		block.text.text = block.num;
 	}
 	
-	console.log(blockList);
+//	console.log(blockList);
 }
 
 //더 이상 진행할 수 없는지 검사
@@ -397,7 +400,7 @@ function onReleased() {
 	_destBlock.text.angle = 0;		
 	
 	if(_srcBlock != null && _destBlock != null) {
-		console.log("src : " + _srcBlock.index, "dest : " + _destBlock.index);
+//		console.log("src : " + _srcBlock.index, "dest : " + _destBlock.index);
 		
 		if(isNearIndex(_srcBlock.index, _destBlock.index) == true) {
 			onInput();		
