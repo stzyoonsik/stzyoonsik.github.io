@@ -225,7 +225,7 @@ function getMinNumBlock() {
 
 function getMaxNum() {
 	var max = 0;
-	for(var i = 1; i < blockList.length; ++i) {
+	for(var i = 0; i < blockList.length; ++i) {
 		if(blockList[i] == null || blockList[i].isBlocked == true) {
 			continue;
 		}
