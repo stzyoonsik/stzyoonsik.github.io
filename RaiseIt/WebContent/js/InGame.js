@@ -301,7 +301,7 @@ function oneCycleComplete(inPoint) {
 	
 	//블록 생성	
 	var maxNum = getMaxNum();
-	console.log("블록 생성 : index : " + oppositeIndices[oppositeIndices.length - 1] + " num : " + maxNum + 1);
+	console.log("블록 생성 : index : " + oppositeIndices[oppositeIndices.length - 1] + " num : " + (maxNum + 1));
 	
 	var newBlock = createBlock(oppositeIndices[oppositeIndices.length - 1], maxNum + 1);
 	bg.addChild(newBlock);
